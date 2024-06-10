@@ -4,7 +4,7 @@ import psycopg2
 
 
 def importing_orders_1():
-    with (open("homework-1/north_data/orders_data.csv", newline='')
+    with (open("C:\Users\User\Desktop\змеиный суп\orders_data.csv", newline='')
           as csvfile):
         orders_1 = []
         filereader = csv.reader(csvfile, quotechar='|')
@@ -47,3 +47,4 @@ with psycopg2.connect(host='localhost', database='north', user='postgres', passw
             print(row)
 
 conn.close()
+
