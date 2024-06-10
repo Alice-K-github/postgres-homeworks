@@ -1,13 +1,11 @@
 -- SQL-команды для создания таблиц
-create database north
-
 create table employees
 (
 	employee_id int primary key,
 	first_name text,
 	last_name text,
 	title text,
-	birth_date data,
+	birth_date date,
 	notes text
 );
 
@@ -24,5 +22,5 @@ create table orders
 	customer_id text REFERENCES customers(customer_id) not null,
 	employee_id int REFERENCES employees(employee_id) not null,
 	order_date date,
-	ship_city text,
+	ship_city text
 );
